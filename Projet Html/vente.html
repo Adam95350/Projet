@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<title>Libraire</title>
+		<script src="base.js"></script>
+	</head>
+	<body>
+		<header>
+			<div id="header">
+				<div id="nomsite">
+					<h1 class="titre">Le Libraire</h1>
+				</div>
+				<div id="divmenu">
+					<div>
+						<h2>Menu: </h2>
+					</div>
+					<div>
+						<input type="image" id="buttommenu" alt="menu" src="img/menu.png" value="Afficher ou Masquer" onClick="AfficherMasquer('divmenulist')">
+					</div>
+				</div>
+			</div>
+			<img src="img/logo.png" class="logo1" alt="Logo du site" >
+		</header>
+		<div id="divmenulist" style="display:none;">
+			<nav>
+				<ul id="menu">
+					<li><a href="vente.html" class="anone">Acheter</a></li>
+					<li><a href="index.html" class="anone" class="anone" class="anone">top livre</a></li>
+					<li><a href="trouver.html" class="anone" class="anone">ou nous trouver</a></li>
+					<li><a href="rencontre.html" class="anone">Jeux et rencontre</a></li>
+				</ul>
+			</nav>
+		</div>
+		<main>
+			<div id="test">
+				<div id="toplivreweek" style="height: 996px;">
+					<div class="soustitre">
+						<h1>COMMANDER</h1>
+						<div class = "lead-form" id = "lf">
+							<form class = "input-form">
+							  <input id="ip1" class = "inputs" type = "text" placeholder =" Nom prenom" required>
+							  <input id="ip2" class = "inputs" type = "text" placeholder =" adresse" required>
+							  <input id="ip3" class = "inputs" type = "text" placeholder =" addresse ligne 2">
+							  <input id="ip4" class = "inputs" type = "text" placeholder =" Ville" required>
+							  <select id="ip5" class = "inputs" required>
+							  <option value="" disabled selected>Livre</option>
+							  <option value ="La Belle au bois">La Belle au bois</option>
+							  <option value ="L'Assassin royal">L'Assassin royal, Tome 1 : L'apprenti assassin</option>
+							  <option value ="Anna Karénine">Anna Karénine - Léon Tolstoï - Babelio</option>
+							  <option value ="Le poète">Le poète - Michael Connelly - Babelio</option>
+							  <option value ="Gagner la guerre">Gagner la guerre - Jean-Philippe Jaworski - Babelio</option>
+							  <option value ="Il était deux fois">Il était deux fois - Franck Thilliez - Babelio</option>
+							  <option value ="Cent ans de Solitude">Cent ans de Solitude - Gabriel Garcia Marquez - Babelio</option>
+							  </select>
+							  <input id="ip6" class = "inputs" type = "text" placeholder =" Numéro" required>
+							  <input type ="submit" class ="ptp" id ="ptpt" value ="Commander">
+							</form>
+						  </div>
+						  <section class ="planner-details">
+							<div class = "quantity">
+							  <h3 class ="qty">Quantity</h3>
+							  <div class = "hold2">
+							  <div class = "hold">
+							  <button id = "minus" class ="pmbutton"><h3 class = "but">-</h3></button>
+							  <div class ="cont">
+							  <h2 id ="valu" class ="val">0</h2>
+							  </div>
+							  <button id ="plus" class ="pmbutton"><h3 class = "but">+</h3></button>
+							</div>
+							</div>
+							</div>
+						  <table class= "costing">
+							<tr><td class ="line-item">madras essence planner</td><td class ="rs">Rs.</td><td class ="price" id = "planner-price">0</td></tr>
+							<tr><td class ="line-item">taxes (TVA 2%)</td><td class ="rs">Rs.</td><td class ="price" id = "tax-price">0</td></tr>
+							<tr id="ship"><td class ="line-item">Livraison</td><td class ="rs">Rs.</td><td class ="price" id = "ship-price">0</td></tr>
+							<tr><td style = "border-bottom: 1.5px solid #1E3252;"><br></td><td style = "border-bottom: 1.5px solid #1E3252;"><br></td><td style = "border-bottom: 1.5px solid #1E3252;"><br></td></tr>
+							<tr><td class ="line-item">total</td><td class ="rs">Rs.</td><td class ="price" id = "total-price">0</td></tr>
+						  </table>
+						  </section>
+						  <div class= "safe">
+							<div id = "shield">
+							  <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M6.54545 16C2.18182 14.0561 0 12.1167 0 10.1818V2.90909C0 2.35084 0.214254 2.2211 0.80722 1.86203C0.986756 1.75331 1.20101 1.62357 1.45455 1.45455C1.57221 1.3761 4.04597 0 6.54545 0C8.72382 0 10.5455 0.727273 11.6364 1.45455C11.8899 1.62357 12.1041 1.75331 12.2837 1.86202L12.2837 1.86203C12.8767 2.2211 13.0909 2.35084 13.0909 2.90909C13.1052 3.06708 13.0982 6.42699 13.0937 8.57796L13.0937 8.58143C13.0921 9.31335 13.0909 9.90484 13.0909 10.1818C13.0909 12.1212 10.9091 14.0606 6.54545 16ZM11.6364 10.1818C11.6364 10.0143 11.6368 9.73367 11.6377 9.27614L11.6406 7.85558L11.6429 6.6253C11.6456 5.00192 11.6449 3.6086 11.6433 3.17766L11.5434 3.11566L11.5434 3.11564C11.3082 2.96975 11.0017 2.77959 10.8295 2.6648C9.75587 1.94903 8.18922 1.45455 6.54546 1.45455C4.97316 1.45455 2.92992 2.21911 2.26138 2.6648C2.0892 2.77959 1.78267 2.96975 1.5475 3.11565L1.45455 3.17333V10.1818C1.45455 11.2789 3.07572 12.7773 6.54613 14.4015C10.0161 12.7809 11.6364 11.2831 11.6364 10.1818ZM8.9403 5.30393L5.81819 8.42604L4.15063 6.75848L3.12211 7.787L5.81819 10.4831L9.96882 6.33245L8.9403 5.30393Z" fill="black"/>
+						</svg>
+							</div>
+						  <h5 class ="safep">100% safe payments</h5>
+							<div id = "lock">
+							  <svg width="13" height="17" viewBox="0 0 13 17" fill="#000000" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M2.5415 4.54171V6.91671H1.74984C0.904059 6.91671 0.166504 7.53134 0.166504 8.3681V14.9653C0.166504 15.8021 0.904059 16.4167 1.74984 16.4167H11.2498C12.0956 16.4167 12.8332 15.8021 12.8332 14.9653V8.3681C12.8332 7.53134 12.0956 6.91671 11.2498 6.91671H10.4582V4.54171C10.4582 2.35558 8.68596 0.583374 6.49984 0.583374C4.31371 0.583374 2.5415 2.35558 2.5415 4.54171ZM8.87484 4.54171V6.91671H4.12484V4.54171C4.12484 3.23003 5.18816 2.16671 6.49984 2.16671C7.81151 2.16671 8.87484 3.23003 8.87484 4.54171ZM1.74984 14.8334V8.50004H11.2498V14.8334H1.74984ZM7.2915 11.6667C7.2915 12.1039 6.93706 12.4584 6.49984 12.4584C6.06261 12.4584 5.70817 12.1039 5.70817 11.6667C5.70817 11.2295 6.06261 10.875 6.49984 10.875C6.93706 10.875 7.2915 11.2295 7.2915 11.6667Z" fill="black"/>
+						</svg>
+						</div>
+						</div>
+						<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+					</div>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>

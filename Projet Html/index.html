@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<title>Libraire</title>
+		<script src="base.js"></script>
+	</head>
+	<body>
+		<header>
+			<div id="header">
+				<div id="nomsite">
+					<h1 class="titre">Le Libraire</h1>
+				</div>
+				<div id="divmenu">
+					<div>
+						<h2>Menu: </h2>
+					</div>
+					<div>
+						<input type="image" id="buttommenu" alt="menu" src="img/menu.png" value="Afficher ou Masquer" onClick="AfficherMasquer('divmenulist')">
+					</div>
+				</div>
+			</div>
+			<img src="img/logo.png" class="logo1" alt="Logo du site" >
+		</header>
+		<div id="divmenulist" style="display:none;">
+			<nav>
+				<ul id="menu">
+					<li><a href="vente.html" class="anone">Acheter</a></li>
+					<li><a href="index.html" class="anone" class="anone" class="anone">top livre</a></li>
+					<li><a href="trouver.html" class="anone" class="anone">ou nous trouver</a></li>
+					<li><a href="rencontre.html" class="anone">Jeux et rencontre</a></li>
+				</ul>
+			</nav>
+		</div>
+		<main>
+			<div id="test">
+				<div id="toplivreweek">
+					<div class="soustitre">
+						<h1>Les meilleurs Livres de la semaine</h1>
+					</div>
+					<div id="container">
+						<fieldset class="slideshow">
+							<!-- Slide 1 -->
+							<label class="slide-button" for="slideCheckbox1">Top 1</label>
+							<input type="radio" id="slideCheckbox1" name="slide" checked></input>
+							<div class="slide">
+								<div class="slide__content">								
+									<p>Un livre a la hauteur</p>
+									<p>Une histoire prenante résumer </p>
+									<ul>
+										<li>Un personnage formidable</li>
+										<li>Une histoire extrêmement bien tournée</li>
+										<li>Des rebondissements géraient à merveillee</li>
+										<li>Et une fin Magnifique</li>
+									</ul>
+							</div>
+							</div>
+							<!-- Slide 2 -->
+							<label class="slide-button" for="slideCheckbox2">Top 2</label>
+							<input type="radio" id="slideCheckbox2" name="slide"></input>
+							<div class="slide">
+								<div class="slide__content">
+									<h1>Anselm jappe</h1>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tristique quis neque quis efficitur. Cras sed scelerisque nibh. Donec eleifende vestibulum nec. Pellentesque tincidunt</p>
+									<p>Lorem ipsum dolor sit amet, consecteturibulum nec. Pellentesque tincidunt</p>
+								</div>
+							</div>
+							<!-- Slide 3 -->
+							<label class="slide-button" for="slideCheckbox3">Top 3</label>
+							<input type="radio" id="slideCheckbox3" name="slide"></input>
+							<div class="slide">
+								<div class="slide__content">
+									<h1>Christian White</h1>
+									<p>urabitur lobortis, nibh eu sagittis eleifend, erat ante dignissim nb</p>
+								</div>
+							</div>
+							<!-- Slide 4 -->
+							<label class="slide-button" for="slideCheckbox4">Top 4</label>
+							<input type="radio" id="slideCheckbox4" name="slide"></input>
+							<div class="slide">
+								<div class="slide__content">
+									<h1>PHP</h1>
+									<p>Yada yada</p>
+								</div>
+							</div>
+							<!-- Slide 5 -->
+							<label class="slide-button" for="slideCheckbox5">Top 5</label>
+							<input type="radio" id="slideCheckbox5" name="slide"></input>
+							<div class="slide">
+								<div class="slide__content">
+									<h1>The end</h1>
+									<p>It's over</p>
+								</div>
+							</div>
+						</fieldset>
+					</div>
+				</div>
+				<div id="vote">
+					<div class="soustitre">
+						<h1>Quelle est le meuilleur</h1>
+					</div>
+					<div class="slideshow-container">
+						<div class="mySlides fade">
+							<img src="https://images-na.ssl-images-amazon.com/images/I/41kNX+enOUL._SX331_BO1,204,203,200_.jpg" alt="Livre guy de Maupassant" class="imgvote1">
+							<button name="button">Like</button>
+							<button name="button">Unlike</button>
+						</div>
+						
+						<div class="mySlides fade">
+							<img src="https://static.fnac-static.com/multimedia/Images/FR/NR/21/18/bf/12523553/1540-1/tsp20201105171059/Une-jeunee-au-Moyen-Orient-1992-1994.jpg" alt="Livre guy de Maupassant" class="imgvote1">
+							<button name="button">Like</button>
+							<button name="button">Unlike</button>
+						</div>
+						
+						<div class="mySlides fade">
+							<img src="https://static.fnac-static.com/multimedia/Images/FR/NR/f3/49/bc/12339699/1540-1/tsp20201205073102/L-anomalie.jpg" alt="Livre guy de Maupassant" class="imgvote1">
+							<button name="button">Like</button>
+							<button name="button">Unlike</button>
+						</div>
+						
+						
+						<br>
+						
+						<div style="text-align:center">
+							<span class="dot"></span> 
+							<span class="dot"></span> 
+							<span class="dot"></span> 
+						</div>
+						<script>
+							var slideIndex = 0;
+							showSlides();
+							
+							function showSlides() {
+								var i;
+								var slides = document.getElementsByClassName("mySlides");
+								var dots = document.getElementsByClassName("dot");
+								for (i = 0; i < slides.length; i++) {
+									slides[i].style.display = "none";  
+								}
+								slideIndex++;
+								if (slideIndex > slides.length) {slideIndex = 1}    
+								for (i = 0; i < dots.length; i++) {
+									dots[i].className = dots[i].className.replace(" active", "");
+								}
+								slides[slideIndex-1].style.display = "block";  
+								dots[slideIndex-1].className += " active";
+								setTimeout(showSlides, 2000); // Change image every 2 seconds
+							}
+						</script>
+					</div>
+				</div>
+				<div id="nouveau">
+					<div class="soustitre">
+						<h1 style="padding: 5px;">Les nouveaux arrivages</h1>
+					</div>
+					<div class="container-carousel">
+						<div class="carousel__scene">
+							<div class="carousel__carousel">
+								<div class="carousel__cell"><a href="vente.html"><img class="imgcar" src="https://static.fnac-static.com/multimedia/Images/FR/NR/16/8e/c1/12684822/1540-1/tsp20201117071642/Une-terre-promise.jpg"/></a></div>
+								<div class="carousel__cell"><a href="vente.html"><img class="imgcar" src="https://static.fnac-static.com/multimedia/Images/FR/NR/f3/49/bc/12339699/1540-1/tsp20201205073102/L-anomalie.jpg"/></a></div>
+								<div class="carousel__cell"><a href="vente.html"><img class="imgcar" src="https://static.fnac-static.com/multimedia/Images/FR/NR/51/2b/ae/11414353/1540-1/tsp20201207070754/Nickel-Boys.jpg"/></a></div>
+								<div class="carousel__cell"><a href="vente.html"><img class="imgcar" src="https://static.fnac-static.com/multimedia/Images/FR/NR/3b/0f/bd/12390203/1540-1/tsp20201207071243/Buveurs-de-vent.jpg"/></a></div>
+								<div class="carousel__cell"><a href="vente.html"><img class="imgcar" src="https://static.fnac-static.com/multimedia/Images/FR/NR/36/81/bd/12419382/1540-1/tsp20200703070718/Ne-d-aucune-femme.jpg"/></a></div>
+								<div class="carousel__cell"><a href="vente.html"><img class="imgcar" src="https://static.fnac-static.com/multimedia/Images/FR/NR/cf/15/bb/12260815/1540-1/tsp20200720174311/Pour-un-instant-d-eternite.jpg"/></a></div>
+								<div class="carousel__cell"><a href="vente.html"><img class="imgcar" src="https://static.fnac-static.com/multimedia/Images/FR/NR/10/b4/bb/12301328/1540-1/tsp20200825071739/On-ne-meurt-pas-d-amour.jpg"/></a></div>
+								<div class="carousel__cell"><a href="vente.html"><img class="imgcar" src="https://static.fnac-static.com/multimedia/Images/FR/NR/56/b4/b4/11842646/1540-1/tsp20201001071542/La-vie-revee-des-chauettes-orphelines.jpg"/></a></div>
+								<div class="carousel__cell"><a href="vente.html"><img class="imgcar" src="https://static.fnac-static.com/multimedia/Images/FR/NR/b1/a9/bf/12560817/1540-1/tsp20201001071542/La-vie-a-plus-d-imagination-que-nous.jpg"/></a></div>
+								<div class="carousel__cell"><a href="vente.html"><img class="imgcar" src="https://static.fnac-static.com/multimedia/Images/FR/NR/a6/26/bd/12396198/1540-1/tsp20200829071027/Ceux-qu-on-aime.jpg"/></a></div>
+								<div class="carousel__cell"><a href="vente.html"><img class="imgcar" src="https://static.fnac-static.com/multimedia/Images/FR/NR/10/b4/bb/12301328/1540-1/tsp20200825071739/On-ne-meurt-pas-d-amour.jpg"/></a></div>
+								<div class="carousel__cell"><a href="vente.html"><img class="imgcar" src="https://static.fnac-static.com/multimedia/Images/FR/NR/44/81/bd/12419396/1540-1/tsp20200904070309/Les-Refuges.jpg"/></a></div>
+								<div class="carousel__cell"><a href="vente.html"><img class="imgcar" src="https://static.fnac-static.com/multimedia/Images/FR/NR/ef/29/bf/12528111/1540-1/tsp20201118073156/Les-Roses-de-la-nuit.jpg"/></a></div>
+								<div class="carousel__cell"><a href="vente.html"><img class="imgcar" src="https://static.fnac-static.com/multimedia/Images/FR/NR/08/b4/bb/12301320/1540-1/tsp20200730070401/L-Ile-du-Diable.jpg"/></a></div>
+								<div class="carousel__cell"><a href="vente.html"><img class="imgcar" src="https://static.fnac-static.com/multimedia/Images/FR/NR/fe/cd/bb/12307966/1540-1/tsp20200904070347/Le-dernier-meage.jpg"/></a></div>
+							</div>
+						</div>
+						<div class="btn-carousel">
+							<div class="btn__left-right">
+								<div class="btn__left">
+									<button class="btn left-btn" value="left">PREVIOUS</button>
+								</div>
+								<div class="btn__right" value="right">
+									<button class="btn right-btn" value="right">NEXT</button>
+								</div>    
+							</div>
+							<div class="btn__slider">
+								<input type="range" class="btn__carousel-slider" min="15" max="15" value="15">
+							</div>
+						</div>
+					</div>
+					<script src="carouselle.js"></script>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>
